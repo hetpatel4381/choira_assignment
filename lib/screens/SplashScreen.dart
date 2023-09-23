@@ -30,10 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToNextScreen() async {
-    // Simulate a delay
     await Future.delayed(const Duration(milliseconds: 5000));
-
-    // Navigate to the next screen, e.g., "Onboarding"
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => OnboardingScreen()),
@@ -77,21 +74,21 @@ class _SplashScreenState extends State<SplashScreen> {
                         TextSpan(
                           text: 'Ch',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 36,
                             color: Color(0xFFFFC701),
                           ),
                         ),
                         TextSpan(
                           text: 'o',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 36,
                             color: Colors.white,
                           ),
                         ),
                         TextSpan(
                           text: 'ira',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 36,
                             color: Color(0xFFFFC701),
                           ),
                         ),
@@ -99,8 +96,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                   Positioned(
-                    top: 25, // Adjust as needed for positioning
-                    left: 52, // Adjust as needed for positioning
+                    top: 444,
+                    left: 85,// Adjust as needed for positioning
                     child: SvgPicture.asset(
                       'assets/your_svg_image.svg', // Replace with your SVG file path
                       width: 40, // Adjust the size as needed
