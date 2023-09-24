@@ -1,5 +1,6 @@
+import 'package:choira/screens/OnBoardingScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart'; // Import the flutter_svg package
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(SplashScreenApp());
@@ -30,10 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToNextScreen() async {
-    await Future.delayed(const Duration(milliseconds: 5000));
+    await Future.delayed(const Duration(milliseconds: 800));
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => OnboardingScreen()),
+      MaterialPageRoute(builder: (context) => OnBoardingScreen()),
     );
   }
 
@@ -41,88 +42,49 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Color backgroundColor = const Color(0xFF0A1733);
     return Scaffold(
-      backgroundColor: backgroundColor, // Example background color
-      body: Stack(
-        children: [
-          Center(
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 300), // Animation duration
-              curve: Curves.easeOut, // Animation timing function
-              width: 200,
-              height: 200,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/splash_animation.json'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 344,
-            left: 85,
-            width: 219.93,
-            height: 77.59,
-            child: Container(
-              color: Colors.transparent, // Transparent background
-              alignment: Alignment.center,
-              child: Stack(
+      backgroundColor: backgroundColor,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            RichText(
+              text: const TextSpan(
                 children: [
-                  RichText(
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Ch',
-                          style: TextStyle(
-                            fontSize: 36,
-                            color: Color(0xFFFFC701),
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'o',
-                          style: TextStyle(
-                            fontSize: 36,
-                            color: Colors.white,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'ira',
-                          style: TextStyle(
-                            fontSize: 36,
-                            color: Color(0xFFFFC701),
-                          ),
-                        ),
-                      ],
+                  TextSpan(
+                    text: 'ch',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 80,
+                      color: Color(0xFFFFC701),
                     ),
                   ),
-                  Positioned(
-                    top: 444,
-                    left: 85,// Adjust as needed for positioning
-                    child: SvgPicture.asset(
-                      'assets/your_svg_image.svg', // Replace with your SVG file path
-                      width: 40, // Adjust the size as needed
-                      height: 40, // Adjust the size as needed
+                  TextSpan(
+                    text: 'o',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 80,
+                      color: Colors.white,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'ira',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 80,
+                      color: Color(0xFFFFC701),
                     ),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class OnboardingScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Onboarding Screen'),
-      ),
-      body: Center(
-        child: Text('This is the onboarding screen of your app.'),
+            SvgPicture.asset(
+              'assets/Vector-5-(Stroke).svg',
+              width: 42,
+              height: 13,
+              color: const Color(0xFFFFC701),
+            ),
+          ],
+        ),
       ),
     );
   }
