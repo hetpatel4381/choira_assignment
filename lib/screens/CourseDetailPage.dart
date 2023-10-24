@@ -17,7 +17,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
           Container(
             height: 25,
             width: 358,
-            margin: const EdgeInsets.only(left: 0, top: 40),
+            margin: const EdgeInsets.only(left: 14, top: 40),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -57,7 +57,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
           Container(
               width: 358,
               height: 56,
-              margin: const EdgeInsets.only(left: 0),
+              margin: const EdgeInsets.only(left: 14),
               child: const Text(
                 "Mixing-Mastering Fundamentals Course",
                 style: TextStyle(color: Colors.white, fontSize: 25),
@@ -68,7 +68,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
           Container(
             height: 43,
             width: 358,
-            margin: const EdgeInsets.only(left: 0),
+            margin: const EdgeInsets.only(left: 14),
           ),
           const SizedBox(
             height: 21,
@@ -76,7 +76,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
           Container(
             width: 358,
             height: 187,
-            margin: const EdgeInsets.only(left: 0),
+            margin: const EdgeInsets.only(left: 14),
             child: Image.asset("assets/Group21.png"),
           ),
           const SizedBox(
@@ -85,7 +85,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
           Container(
             width: 358,
             height: 173,
-            margin: const EdgeInsets.only(left: 0, top: 20),
+            margin: const EdgeInsets.only(left: 14, top: 20),
             color: const Color.fromARGB(255, 3, 36, 63),
             child: Column(
               children: [
@@ -173,12 +173,12 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
             color: const Color.fromARGB(255, 3, 36, 63),
             width: 358,
             height: 78,
-            margin: EdgeInsets.only(left: 0),
+            margin: EdgeInsets.only(left: 14),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: 0, top: 20),
+                  padding: EdgeInsets.only(left: 14, top: 20),
                   child: Column(
                     children: [
                       Padding(
