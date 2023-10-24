@@ -1,4 +1,5 @@
-import 'package:choira/screens/BottomNavigation.dart';
+// import 'package:choira/screens/BottomNavigation.dart';
+import 'package:choira/screens/MyBottomNavigationBar.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -73,7 +74,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                 ],
               ),
-
             ),
           ),
           const SizedBox(height: 24),
@@ -158,22 +158,28 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => MyBottomNavigationBar(),
+                Container(
+                  child: Builder(builder: (BuildContext builderContext) {
+                    return TextButton(
+                      onPressed: () {
+                        print("Navigated");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyBottomNavigationBar(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Guest Mode',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
                       ),
                     );
-                  },
-                  child: const Text(
-                    'Guest Mode',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+                  }),
+                )
               ],
             ),
           ),

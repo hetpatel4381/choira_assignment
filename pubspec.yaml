@@ -61,17 +61,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets\Vector-5-(Stroke).svg
-   - assets\Vector-5-(Stroke).png
-   - assets/Rectangle-1.png
-   - assets/Rectangle-2.png
-   - assets/Rectangle-3.png
-   - assets/Rectangle-4.png
-   - assets/akar-icons_home.svg
-   - assets/akar-icons_search.svg
-   - assets/iconoir_cloud-download.svg
-   - assets/iconoir_cloud-download(1).svg
-   - assets/Vector-1.svg
+   - assets/
+   - assets/course/
+   - assets/frame/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

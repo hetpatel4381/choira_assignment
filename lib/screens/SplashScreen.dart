@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToNextScreen() async {
-    await Future.delayed(const Duration(milliseconds: 800));
+    await Future.delayed(const Duration(milliseconds: 1500));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => OnBoardingScreen()),
